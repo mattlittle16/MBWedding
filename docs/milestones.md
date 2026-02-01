@@ -20,7 +20,7 @@ This dramatically reduces complexity and creates a true time capsule of the wedd
 |---|-----------|-------------|--------|
 | 1 | Data Extraction | Extract guestbook data to JSON | **Complete** |
 | 2 | Project Setup | Create .NET 8 project structure | **Complete** |
-| 3 | Static Data Layer | Implement JSON-based data access | Not Started |
+| 3 | Static Data Layer | Implement JSON-based data access | **Complete** |
 | 4 | Core Application | Port controllers and API endpoints | Not Started |
 | 5 | Frontend Cleanup | Remove admin, remove guestbook form, serve static | Not Started |
 | 6 | Docker Configuration | Create Dockerfile and compose setup | Not Started |
@@ -148,10 +148,10 @@ Based on SQL dump analysis, these are the real guest entries (IsVisible=1, IsDel
 
 ### Tasks
 
-- [ ] Create `GuestBookEntry` model
-- [ ] Create `GuestBookService` to load and serve JSON data
-- [ ] Implement caching (load once at startup)
-- [ ] Add sorting by date
+- [x] Create `GuestBookEntry` model
+- [x] Create `GuestBookService` to load and serve JSON data
+- [x] Implement caching (load once at startup via singleton)
+- [x] Add sorting by date (descending - newest first)
 
 ### Code Changes
 
@@ -416,7 +416,7 @@ docker-compose logs
 
 ### Current Status
 
-**Active Milestone**: Milestone 3 (awaiting user verification of Milestone 2)
+**Active Milestone**: Milestone 4 (awaiting user verification of Milestone 3)
 
 ### Completed Milestones
 
@@ -429,6 +429,11 @@ docker-compose logs
   - Created `MBWedding.sln` solution file
   - Configured for Linux/container deployment
   - Set up directory structure (Controllers, Models, Services, Data, wwwroot)
+
+- **Milestone 3: Static Data Layer** - Completed 2026-02-01
+  - Created `GuestBookEntry` model
+  - Created `GuestBookService` singleton
+  - Loads JSON at startup, serves sorted by date
 
 ### Notes
 
@@ -484,4 +489,4 @@ docker-compose logs
 ---
 
 *Document created: 2026-02-01*
-*Last updated: 2026-02-01 (Milestone 2 complete)*
+*Last updated: 2026-02-01 (Milestone 3 complete)*

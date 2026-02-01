@@ -1,7 +1,10 @@
+using MBWedding.Web.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services
 builder.Services.AddControllers();
+builder.Services.AddSingleton<GuestBookService>();
 
 // Configure Kestrel for container deployment
 builder.WebHost.ConfigureKestrel(options =>
