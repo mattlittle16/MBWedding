@@ -1,0 +1,46 @@
+name: Deploy to Homelab
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Stop existing container (if running)
+      run: |
+        docker stop mbwedding || true
+        docker rm mbwedding || true
+      continue-on-error: true
+
+    - name: Build Docker image
+      run: |
+        docker build -t mbwedding:latest .
+
+    - name: Run new container
+      run: |
+        docker run -d \
+          --name mbwedding \
+          --restart always \
+          --network app-network \
+          -e ASPNETCORE_ENVIRONMENT=Production \
+          -e ASPNETCORE_URLS=http://+:8080 \
+          mbwedding:latest
+
+    - name: Verify deployment
+      run: |
+        sleep 10
+        # Check container is running
+        docker ps | grep mbwedding || exit 1
+        # Check health endpoint
+        docker exec mbwedding curl -f http://localhost:8080/api/guestbook || exit 1
+
+    - name: Clean up old images
+      run: |
+        docker image prune -f
