@@ -21,7 +21,7 @@ This dramatically reduces complexity and creates a true time capsule of the wedd
 | 1 | Data Extraction | Extract guestbook data to JSON | **Complete** |
 | 2 | Project Setup | Create .NET 8 project structure | **Complete** |
 | 3 | Static Data Layer | Implement JSON-based data access | **Complete** |
-| 4 | Core Application | Port controllers and API endpoints | Not Started |
+| 4 | Core Application | Port controllers and API endpoints | **Complete** |
 | 5 | Frontend Cleanup | Remove admin, remove guestbook form, serve static | Not Started |
 | 6 | Docker Configuration | Create Dockerfile and compose setup | Not Started |
 | 7 | Smoke Test & Deploy | Build container, verify it runs | Not Started |
@@ -196,10 +196,13 @@ public class GuestBookService
 
 ### Tasks
 
-- [ ] Port `GuestBookController` (read-only, no POST needed for preservation)
-- [ ] Port `GalleryController` (if needed, or make static)
-- [ ] Configure routing to match original API paths
-- [ ] Remove authentication (not needed for read-only preservation)
+- [x] Port `GuestBookController` (read-only GET endpoint only)
+- [x] Configure routing to match original API path (`/api/guestbook`)
+- [x] Remove authentication (not needed for read-only preservation)
+- [x] Verified API returns JSON data correctly
+
+### Note
+Gallery images will be served as static files in Milestone 5 - no controller needed.
 
 ### API Endpoints
 
@@ -416,7 +419,7 @@ docker-compose logs
 
 ### Current Status
 
-**Active Milestone**: Milestone 4 (awaiting user verification of Milestone 3)
+**Active Milestone**: Milestone 5 (awaiting user verification of Milestone 4)
 
 ### Completed Milestones
 
@@ -434,6 +437,11 @@ docker-compose logs
   - Created `GuestBookEntry` model
   - Created `GuestBookService` singleton
   - Loads JSON at startup, serves sorted by date
+
+- **Milestone 4: Core Application** - Completed 2026-02-01
+  - Created read-only `GuestBookController`
+  - API endpoint `GET /api/guestbook` working
+  - Tested and verified JSON response
 
 ### Notes
 
@@ -489,4 +497,4 @@ docker-compose logs
 ---
 
 *Document created: 2026-02-01*
-*Last updated: 2026-02-01 (Milestone 3 complete)*
+*Last updated: 2026-02-01 (Milestone 4 complete)*
