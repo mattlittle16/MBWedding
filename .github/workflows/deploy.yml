@@ -35,11 +35,12 @@ jobs:
 
     - name: Verify deployment
       run: |
-        sleep 10
+        sleep 5
         # Check container is running
         docker ps | grep mbwedding || exit 1
-        # Check health endpoint
-        docker exec mbwedding curl -f http://localhost:8080/api/guestbook || exit 1
+        # Get container IP and check health endpoint from host
+        CONTAINER_IP=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mbwedding)
+        curl -f http://${CONTAINER_IP}:8080/api/guestbook || exit 1
 
     - name: Clean up old images
       run: |
