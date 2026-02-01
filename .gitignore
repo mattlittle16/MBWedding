@@ -6,6 +6,8 @@
 *.user
 *.sln.docstates
 
+MBWedding.sql
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
