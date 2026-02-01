@@ -14,14 +14,14 @@
             <div masonry-tile ng-repeat="post in posts" class="well tile">
                 <div class="TextBlock">
                     <p>
-                        {{ post.Message }}
+                        {{ post.message }}
                         <br />
                         <br />
                         <b>Love,</b>
                         <br />
-                        {{ post.Name }}
+                        {{ post.name }}
                         <br />
-                        {{ post.Injected }}
+                        {{ post.date | date:'MMMM d, yyyy' }}
                     </p>
                 </div>
             </div>

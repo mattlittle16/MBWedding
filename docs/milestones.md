@@ -23,7 +23,7 @@ This dramatically reduces complexity and creates a true time capsule of the wedd
 | 3 | Static Data Layer | Implement JSON-based data access | **Complete** |
 | 4 | Core Application | Port controllers and API endpoints | **Complete** |
 | 5 | Frontend Cleanup | Remove admin, remove guestbook form, serve static | **Complete** |
-| 6 | Docker Configuration | Create Dockerfile and compose setup | Not Started |
+| 6 | Docker Configuration | Create Dockerfile and compose setup | **Complete** |
 | 7 | Smoke Test & Deploy | Build container, verify it runs | Not Started |
 
 ---
@@ -419,7 +419,7 @@ docker-compose logs
 
 ### Current Status
 
-**Active Milestone**: Milestone 6 (Docker Configuration) - awaiting user approval
+**Active Milestone**: Milestone 7 (Smoke Test & Deploy) - awaiting user approval
 
 ### Completed Milestones
 
@@ -452,6 +452,12 @@ docker-compose logs
   - Removed admin/login routes from `app.module.js`
   - Created `index.html` (converted from Razor template)
   - Verified static files, API, and SPA fallback all working
+
+- **Milestone 6: Docker Configuration** - Completed 2026-02-01
+  - Created multi-stage `Dockerfile` (SDK build → runtime image)
+  - Created `docker-compose.yml` with health checks
+  - Created `.dockerignore` to optimize build context
+  - Verified Docker build succeeds
 
 ### Notes
 
@@ -507,4 +513,4 @@ docker-compose logs
 ---
 
 *Document created: 2026-02-01*
-*Last updated: 2026-02-01 (Milestone 5 complete)*
+*Last updated: 2026-02-01 (Milestone 6 complete)*

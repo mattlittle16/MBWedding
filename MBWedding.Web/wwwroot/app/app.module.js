@@ -15,7 +15,7 @@
                 controller: 'homeController'
             })
             .when('/ourstory', {
-                templateUrl: '/app/our-story/ourStory.html',
+                templateUrl: '/app/our-story/ourstory.html',
                 controller: 'ourStoryController'
             })
             .when('/gallery', {
