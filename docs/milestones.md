@@ -443,6 +443,16 @@ docker-compose logs
   - API endpoint `GET /api/guestbook` working
   - Tested and verified JSON response
 
+- **Milestone 5: Frontend Cleanup** - Completed 2026-02-01
+  - Copied AngularJS app to `wwwroot/`
+  - Removed admin section (`/app/admin/` directory)
+  - Removed login section (`/app/login/` directory)
+  - Removed auth services (`authService.js`, `authInterceptorService.js`)
+  - Removed guestbook submission form (read-only display)
+  - Removed admin/login routes from `app.module.js`
+  - Created `index.html` (converted from Razor template)
+  - Verified static files, API, and SPA fallback all working
+
 ### Notes
 
 - This document will be updated as we complete each milestone
@@ -497,4 +507,4 @@ docker-compose logs
 ---
 
 *Document created: 2026-02-01*
-*Last updated: 2026-02-01 (Milestone 4 complete)*
+*Last updated: 2026-02-01 (Milestone 5 complete)*
