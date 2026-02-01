@@ -1,0 +1,241 @@
+﻿/*Random Styles*/
+.BoxShadow {
+    box-shadow: 0 2px 9pt -2pt #3A3A3A;
+}
+
+.HoverMe:hover {
+    cursor: pointer;
+}
+
+.HoverTable tbody tr:hover td {
+    cursor: pointer;
+    background: #95a5a6 !important;
+    color: #ecf0f1 !important;
+}
+
+.SmallSquare {
+    height: 25px;
+    width: 25px;
+}
+
+.NoDisplay {
+    display: none;
+}
+
+.NoList {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.SpaceList li {
+    margin-bottom: 10px;
+}
+
+.SpaceList li:last-child {
+    margin-bottom: 0 !important;
+}
+
+.ListInline {
+    list-style: none;
+}
+.ListInline li {
+    display: inline-block;
+
+}
+
+.CHR {
+    border-top: 1px solid rgb(185, 125, 84);
+    margin:5px auto;
+    width: 80%;
+}
+
+.NoHM {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.RLeftBorder {
+    border: none;
+}
+
+
+/*Margins*/
+.MarginTop5 {
+    margin-top: 5px;
+}
+
+.MarginTop10 {
+    margin-top: 10px;
+}
+
+.MarginTop15 {
+    margin-top: 15px;
+}
+
+.MarginTop20 {
+    margin-top: 20px;
+}
+
+.MarginTop25 {
+    margin-top: 25px;
+}
+
+.MarginTop50 {
+    margin-top: 50px;
+}
+
+.MarginRight5 {
+    margin-right: 5px;
+}
+
+.MarginRight10 {
+    margin-right: 10px;
+}
+
+.MarginRight15 {
+    margin-right: 15px;
+}
+
+.MarginRight20 {
+    margin-right: 20px;
+}
+
+.MarginRight25 {
+    margin-right: 25px;
+}
+
+.MarginBottom15 {
+    margin-bottom: 15px;
+}
+
+.MarginBottom25 {
+    margin-bottom: 25px;
+}
+
+.MarginBottom50 {
+    margin-bottom: 50px;
+}
+
+.MarginLeft5 {
+    margin-left: 5px;
+}
+
+.MarginLeft10 {
+    margin-left: 10px;
+}
+
+.MarginLeft20 {
+    margin-left: 20px !important;
+}
+
+
+/*Paddings*/
+.Padding10 {
+    padding: 10px;
+}
+
+.PaddingTop20 {
+    padding-top: 20px;
+}
+
+
+/*Display*/
+.Left {
+    float: left;
+}
+
+.CenterMargin {
+    margin: 0 auto !important;
+}
+
+.Center {
+    text-align: center;
+}
+
+.MakeBlock {
+    display: block !important;
+}
+
+.InlineBlock {
+    display: inline-block;
+}
+
+/*Widths*/
+.Width100 {
+    width: 100%;
+}
+
+.RWidth50 {
+    width: 100%;
+}
+
+.Width250 {
+    width: 100%;
+}
+
+.RCol10 {
+    margin-top: 10px;
+}
+
+.RCol20 {
+    margin-top: 20px;
+}
+
+.CenterResponsiveText {
+    text-align: center;
+}
+
+/*Forms*/
+.input-group-padding {
+    padding: 6px 12px;
+}
+
+
+/*Text Colors*/
+.RedText {
+    color: rgb(231, 76, 60);
+}
+
+.BrownText {
+    color:rgb(142, 89, 54);
+}
+
+.GreenText {
+    color: #27ae60;
+}
+
+.Frederick {
+    font-family: 'Fredericka the Great', cursive;    
+}
+
+.Cinzel {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.Macondo {
+    font-family: 'Macondo', cursive;
+}
+
+.HeaderText {
+    font-size: 60px;
+    color: rgb(231,76,60);
+    font-family: 'Fredericka the Great', cursive;
+    text-align: center;
+}
+
+/*Background Colors*/
+
+
+/*Text*/
+.TextRight {
+    text-align: right;
+}
+
+.SmallText {
+    font-size: 10pt;
+}
+
+.HorizontalScroll {
+    width: 100%;
+    overflow: auto;
+}

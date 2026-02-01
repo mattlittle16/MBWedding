@@ -1,0 +1,30 @@
+<div class="row NoHM MarginTop25">
+    <div class="col-md-12">
+        <h1 class="HeaderText">Guestbook</h1>
+        <div class="MarginTop10 CHR"></div>
+        <div class="CHR"></div>
+        <div ng-show="postsError" class="MarginTop20 MarginBottom25">
+            <h2 class="RedText Frederick">{{ postsError }}</h2>
+        </div>
+        <h2 class="Frederick MarginTop20 MarginBottom25 RedText" ng-show="loadingPosts && !postsError">
+            Loading Guestbook...
+            <i class="fa fa-spinner BigSpinner fa-spin GreenText"></i>
+        </h2>
+        <div masonry='{ "transitionDuration":"0.4s", "itemSelector":".tile"}' class="MarginTop20 Guestbook" ng-show="!postsError && !loadingPosts">
+            <div masonry-tile ng-repeat="post in posts" class="well tile">
+                <div class="TextBlock">
+                    <p>
+                        {{ post.Message }}
+                        <br />
+                        <br />
+                        <b>Love,</b>
+                        <br />
+                        {{ post.Name }}
+                        <br />
+                        {{ post.Injected }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

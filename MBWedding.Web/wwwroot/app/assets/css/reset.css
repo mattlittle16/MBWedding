@@ -1,0 +1,7 @@
+﻿html,body,p,div,img,h1,h2,h3,h4,li,ul,ol,dl,dd,dt,form {
+	margin:0;  
+	padding:0;  
+	border:0;  
+	border-collapse:separate;  
+	border-spacing:0;
+}

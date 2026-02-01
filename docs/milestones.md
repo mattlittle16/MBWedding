@@ -22,7 +22,7 @@ This dramatically reduces complexity and creates a true time capsule of the wedd
 | 2 | Project Setup | Create .NET 8 project structure | **Complete** |
 | 3 | Static Data Layer | Implement JSON-based data access | **Complete** |
 | 4 | Core Application | Port controllers and API endpoints | **Complete** |
-| 5 | Frontend Cleanup | Remove admin, remove guestbook form, serve static | Not Started |
+| 5 | Frontend Cleanup | Remove admin, remove guestbook form, serve static | **Complete** |
 | 6 | Docker Configuration | Create Dockerfile and compose setup | Not Started |
 | 7 | Smoke Test & Deploy | Build container, verify it runs | Not Started |
 
@@ -419,7 +419,7 @@ docker-compose logs
 
 ### Current Status
 
-**Active Milestone**: Milestone 5 (awaiting user verification of Milestone 4)
+**Active Milestone**: Milestone 6 (Docker Configuration) - awaiting user approval
 
 ### Completed Milestones
 

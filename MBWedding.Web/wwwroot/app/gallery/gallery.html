@@ -1,0 +1,33 @@
+﻿<div class="row NoHM MarginTop25">
+    <div class="col-md-12">
+        <h1 class="HeaderText">Gallery</h1>
+        <div class="MarginTop10 CHR"></div>
+        <div class="CHR"></div>
+        <div class="MarginTop20 Gallery" ng-show="!imagesError">
+            <h2 class="Frederick RedText MarginBottom25" ng-show="!isLoaded">
+                Loading Gallery...
+                <i class="fa fa-spinner BigSpinner fa-spin GreenText"></i>
+            </h2>
+            <div ng-repeat="image in images" ng-show="isLoaded">
+                <img ng-src="{{image.source}}" ng-click="open($index, image.source)" img-load="imageLoaded($index)" />
+            </div>
+        </div>
+        <div ng-show="imagesError" class="MarginTop20 MarginBottom25">
+            <h2 class="RedText Macondo">{{ imagesError }}</h2>
+        </div>
+    </div>
+</div>
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-body Center LargeImage">    
+        <span class="glyphicon glyphicon-remove HoverMe pull-left CloseModal" ng-click="cancel()"></span> 
+            <button class="glyphicon Controls glyphicon-chevron-left" ng-click="prev()"></button>
+            <button class="glyphicon Controls glyphicon-chevron-right" ng-click="next()"></button>
+            <img ng-src="{{ largeImage }}" class="img-responsive CenterMargin" />            
+    </div>
+</script>
+
+<style>
+    .modal-content {
+        background: #000;
+    }
+</style>

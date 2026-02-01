@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matt + Brittney</title>
+
+    <link rel="shortcut icon" href="/app/assets/img/heart-icon.png" type="image/x-icon">
+    <link rel="icon" href="/app/assets/img/heart-icon.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS Bundle -->
+    <link rel="stylesheet" href="/app/assets/vendorcss/bootstrap.min.css">
+    <link rel="stylesheet" href="/app/assets/vendorcss/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="/app/assets/vendorcss/nga.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/app/assets/css/reset.css">
+    <link rel="stylesheet" href="/app/assets/css/generic.css">
+    <link rel="stylesheet" href="/app/assets/css/bootstrap-overrides.css">
+    <link rel="stylesheet" href="/app/assets/css/site.css">
+    <link rel="stylesheet" href="/app/assets/css/zresponsive.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great|Cinzel+Decorative|Macondo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Angular Bundle -->
+    <script src="/app/assets/vendorscripts/jquery-2.1.4.min.js"></script>
+    <script src="/app/assets/vendorscripts/jquery.konami.min.js"></script>
+    <script src="/app/assets/vendorscripts/masonry.min.js"></script>
+    <script src="/app/assets/vendorscripts/images-loaded.min.js"></script>
+    <script src="/app/assets/vendorscripts/angular/angular.min.js"></script>
+    <script src="/app/assets/vendorscripts/angular/angular-route.min.js"></script>
+    <script src="/app/assets/vendorscripts/angular/angular-animate.min.js"></script>
+    <script src="/app/assets/vendorscripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="/app/assets/vendorscripts/angular-timer.min.js"></script>
+    <script src="/app/assets/vendorscripts/humanize-duration.js"></script>
+    <script src="/app/assets/vendorscripts/moment.min.js"></script>
+    <script src="/app/assets/vendorscripts/angular-sticky.min.js"></script>
+    <script src="/app/assets/vendorscripts/angular/angular-sanitize.min.js"></script>
+    <script src="/app/app.masonry.js"></script>
+    <script src="/app/app.module.js"></script>
+
+    <!-- Controllers Bundle -->
+    <script src="/app/home/homeController.js"></script>
+    <script src="/app/our-story/ourStoryController.js"></script>
+    <script src="/app/gallery/galleryController.js"></script>
+    <script src="/app/guestbook/guestbookController.js"></script>
+    <script src="/app/gifts/giftsController.js"></script>
+    <script src="/app/weddingparty/weddingpartyController.js"></script>
+    <script src="/app/info/infoController.js"></script>
+    <script src="/app/lodging/lodgingController.js"></script>
+    <script src="/app/shared/page/pageController.js"></script>
+
+    <!-- Directives Bundle -->
+    <script src="/app/home/homeSliderDirective.js"></script>
+    <script src="/app/shared/imgLoadDirective.js"></script>
+    <script src="/app/shared/scrollTop/scrollTopDirective.js"></script>
+
+    <!-- Services Bundle -->
+    <script src="/app/gallery/galleryService.js"></script>
+    <script src="/app/guestbook/guestbookService.js"></script>
+
+</head>
+<body ng-app="mbsite">
+    <div id="PageContainer" class="container-fluid" ng-controller="pageController">
+        <div class="row">
+            <div class="LeftSide col-md-2 hidden-sm hidden-xs">
+                <div class="SideNav" data-sticky data-sticky-top="0">
+                    <h1><a href="#/">M + B</a></h1>
+                    <ul>
+                        <li><a href="#/ourstory">Our Story</a></li>
+                        <li><a href="#/gallery">Gallery</a></li>
+                        <li><a href="#/weddingparty">Wedding Party</a></li>
+                        <li><a href="#/info">When & Where</a></li>
+                        <li><a href="#/lodging">Lodging</a></li>
+                        <li><a href="#/gifts">Gifts</a></li>
+                        <li><a href="#/guestbook">Guestbook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-12 MainCol col-xs-12 col-md-9 MarginBottom50">
+                <div class="MobileBar visible-sm visible-xs nga-default nga-stagger nga-fade" ng-show="!mobileNav" ng-click="mobileNav = !mobileNav">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="MobileNav hidden-md hidden-lg nga-default nga-stagger nga-rotate-left" ng-show="mobileNav">
+                    <ul>
+                        <li><a href="javascript:;" ng-click="mobileNav = !mobileNav">Close <span class="glyphicon glyphicon-remove"></span></a></li>
+                        <li><a href="#/" ng-click="mobileNav = !mobileNav">Home</a></li>
+                        <li><a href="#/ourstory" ng-click="mobileNav = !mobileNav">Our Story</a></li>
+                        <li><a href="#/gallery" ng-click="mobileNav = !mobileNav">Gallery</a></li>
+                        <li><a href="#/weddingparty" ng-click="mobileNav = !mobileNav">Wedding Party</a></li>
+                        <li><a href="#/info" ng-click="mobileNav = !mobileNav">When & Where</a></li>
+                        <li><a href="#/lodging" ng-click="mobileNav = !mobileNav">Lodging</a></li>
+                        <li><a href="#/gifts" ng-click="mobileNav = !mobileNav">Gifts</a></li>
+                        <li><a href="#/guestbook" ng-click="mobileNav = !mobileNav">Guestbook</a></li>
+                    </ul>
+                </div>
+                <ng-view></ng-view>
+            </div>
+        </div>
+    </div>
+    <scroll-top></scroll-top>
+</body>
+</html>
